@@ -21,14 +21,14 @@ class MainClass {
   static int obligations = 0;
   static double plusObligation = 1.2;
   static double minusObligation = 0.95;
-  static double kObligation = 0.97;
+  static double kObligation = 0.995;
   static double currentKObligation = 1;
   static double costObligation = 20;
   //Papers
   static int papers = 0;
   static double plusPapers = 5.6;
   static double minusPapers = 4.4;
-  static double kPapers = 0.96;
+  static double kPapers = 0.98;
   static double currentKPaper = 1;
   static double costPaper = 100;
 
@@ -142,6 +142,11 @@ class MainClass {
     {
       salary += plusObligation * Math.Pow(kObligation, i);
     }
+
+    for(int i = 0; i < papers; i++)
+    {
+      salary += plusPapers * Math.Pow(kPapers, i);
+    }
   }
 
   static void CheckTaxes()
@@ -150,6 +155,11 @@ class MainClass {
     for(int i = 0; i < obligations; i++)
     {
       taxes += Math.Pow(kObligation, i) * minusObligation;
+    }
+
+    for(int i = 0; i < papers; i++)
+    {
+      taxes += Math.Pow(kPapers, i) * minusPapers;
     }
   }
 }
