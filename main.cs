@@ -68,7 +68,7 @@ class MainClass {
         origRow = Console.CursorTop;
         origCol = Console.CursorLeft;
         WriteAt($"$ {cash:f2}  + {salary:f2}  - {taxes:f2}", 1, 1);
-        WriteAt($"1 - Купить облигацию ${costObligation} (+{currentKObligation * plusObligation :f2}, -{(2 - currentKObligation) * minusObligation :f2}); 2 - Купить ценные бумаги ${costPaper} (+{currentKPaper * plusPapers :f2}, -{(2 - currentKPaper) * minusPapers :f2})", 1, 3);
+        WriteAt($"1 - Купить облигацию ${costObligation:f2} (+{currentKObligation * plusObligation :f2}, -{(2 - currentKObligation) * minusObligation :f2}); 2 - Купить ценные бумаги ${costPaper:f2} (+{currentKPaper * plusPapers :f2}, -{(2 - currentKPaper) * minusPapers :f2})", 1, 3);
         WriteAt("Введите команду", 1, 4);
       }
       else
