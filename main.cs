@@ -103,8 +103,8 @@ class MainClass {
 
   static void Game()
   {
-    if(!working)
-    {
+    // if(!working)
+    // {
       
       string asd = Console.ReadLine();
       
@@ -132,7 +132,7 @@ class MainClass {
         Console.SetCursorPosition(enterCol, enterRow);
 
       }
-    }
+    //}
   }
 
   static void CheckSalary()
