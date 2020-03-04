@@ -4,6 +4,7 @@ using System.Threading;
 class MainClass {
   
   static string textError;
+  static int ttk = 250; //тикрейт, скорость игры, чем меньше, тем быстрее
 
   //Текущие координаты курсора
   static int origCol;
@@ -12,7 +13,7 @@ class MainClass {
   static int enterCol = 1;
   static int enterRow = 6;
 
-  static double cash = 10050;
+  static double cash = 50;
 
   static double salary = 0;
   static double taxes = 0;
@@ -45,7 +46,7 @@ class MainClass {
       // устанавливаем метод обратного вызова
       TimerCallback tm = new TimerCallback(Count);
       // создаем таймер
-      Timer timer = new Timer(tm, num, 0, 40);      
+      Timer timer = new Timer(tm, num, 0, ttk);      
 
       while(cash > 0)
       {
